@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Facts about Llamas!</title>
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="main.css">
+    <div id="myFacts">
+        <h1 class="title">Some facts about {{animal}}?</h1>
+        <ul>
+            <li v-if="learn">{{animal}} are members of the camelid family meaning they're pretty closely related to vicuñas and camels.</li>
+            <li>Llama poop has almost no odor. </li>
+            <li>{{animal}} are close relatives of {{relatives}}.</li>
+            <li>{{animal}} are smart and easy to {{social}}.</li>
+            <li>{{communication}} is one of the ways llamas communicate.</li>
+            <li>{{animal}} are used as therapy animals to work in {{workspaces}}.</li>
+            <li>National Llama Day is {{celebrate}}.</li>
+            <li>{{animal}} can grow to be {{height}} tall!</li>
+            <li>{{animal}} don't bite. They spit when they're agitated, but that's mostly at each other.</li>
+            <li>{{animal}} are {{diet}} with highly efficient digestive systems.</li>
+        </ul>
+    </div>
+    <img src="images/llama.jpg" alt="llama">
+    <script src="main.js"></script>
+</body>
+</html>

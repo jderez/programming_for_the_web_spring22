@@ -1,0 +1,16 @@
+body {
+    background-color: beige;
+    padding: 20px;
+}
+
+h1 {
+    font: 'Montserrat';
+    font-size: 50px;
+    color: darkblue;
+}
+
+li {
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+    padding: 10px;
+}
