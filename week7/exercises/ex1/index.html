@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Llamas versus Alpacas</title>
+</head>
+<body>
+    <link rel="stylesheet" href="main.css">
+    <div id="myApp" v-cloak>
+    <h1 v-bind:style="pageHeader">Llamas vs Alpacas</h1>
+    <nav>
+        <ul>
+            <li><a v-bind:class="{active: currentRoute==='llamaWiki'}" v-bind:title="llamaTitle" v-bind:href="llamaLink">Llama wiki</a></li>
+
+            <li><a v-bind:class="{active: currentRoute==='alpacaWiki'}" v-bind:title="alpacaTitle" v-bind:href="alpacaLink">Alpaca wiki</a></li>
+        </ul>
+    </nav>
+        <div v-bind:style="flexContainer">
+            <ul v-bind:style="listStyle">
+                <li v-bind:style="itemStyle">{{llamaFact1}}</li>
+                <li v-bind:style="itemStyle">{{llamaFact2}}</li>
+                <li v-bind:style="itemStyle">{{llamaFact3}}</li>
+                <li v-bind:style="itemStyle">{{llamaFact4}}</li>
+                <li v-bind:style="itemStyle">{{llamaFact5}}</li>
+            </ul>
+            <ul v-bind:style="listStyle">
+                <li v-bind:style="itemStyle">{{alpacaFact1}}</li>
+                <li v-bind:style="itemStyle">{{alpacaFact2}}</li>
+                <li v-bind:style="itemStyle">{{alpacaFact3}}</li>
+                <li v-bind:style="itemStyle">{{alpacaFact4}}</li>
+                <li v-bind:style="itemStyle">{{alpacaFact5}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

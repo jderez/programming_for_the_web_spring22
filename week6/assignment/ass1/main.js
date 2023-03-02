@@ -5,7 +5,7 @@ createApp({
        return {
         animal: "Llamas",
         learn: true,
-        lifespan: "20 years",
+        poop: "no odor.",
         social: "train",
         height: "6 feet",
         communication: "Humming",
