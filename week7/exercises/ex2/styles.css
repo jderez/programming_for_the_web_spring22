@@ -1,0 +1,35 @@
+html {
+  font-family: 'Courier New', Courier, monospace, "DejaVu Sans", sans-serif
+}
+.llama-list-title {
+  border-bottom: 2px solid #000000;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: 500;
+}
+.list-container {
+  border-bottom: 1px solid #000000;
+  padding: 5px;
+}
+.list-head .rank, .list-head .name {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+}
+.rank-container {
+  display: flex;
+  justify-items: center;
+  padding: .5rem;
+}
+.rank-item {
+  width: 45%;
+  text-align: center;
+  padding: 0;
+}
+.even {
+  background: #edcd00;
+}
+.bold {
+  font-weight: bold;
+  color: #0a0382;
+}
