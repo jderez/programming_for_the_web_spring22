@@ -7,6 +7,7 @@ const gameState = {
     totalPairs: 5,
     flippedCards: [],
     numMatched: 0,
+    attempts: 0,
     waiting: false
 };
 let cardfaceArray = [];
@@ -30,7 +31,7 @@ function setup() {
         const face = cardfaceArray[randomIdx];
         selectedFaces.push(face);
         selectedFaces.push(face);
-        cardfaceArray.splice[randomIdx, 1];
+        cardfaceArray.splice(randomIdx, 1);
     }
     selectedFaces = shuffleArray(selectedFaces);
     for (let j=0; j < 2; j++) {
@@ -53,7 +54,7 @@ function draw () {
         noLoop();
     }
     for (let k = 0; k < cards.length; k++) {
-        if (cards[k].isMatch) {
+        if (!cards[k].isMatch) {
             cards[k].face = DOWN;
         }
         cards[k].show();
