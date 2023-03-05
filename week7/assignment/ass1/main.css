@@ -1,0 +1,28 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+    text-align: center;
+}
+.table {
+    margin: 1rem;
+    text-align: center;
+}
+td {
+    padding: 3rem;
+    border: 2px dashed black;
+}
+.even {
+    background: #b1c3e4;
+}
+
+.odd{
+    background: wheat;
+}
+#description {
+    text-align: center;
+}
+
+th {
+    padding: 50px;
+}
