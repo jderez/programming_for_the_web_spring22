@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Alpaca Form</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="main.css">
+    <div id="app" v-cloack>
+      <form>
+        <fieldset>
+            <legend>Fan Club Registration</legend>
+            <div>
+                <label for="firstName">First Name:</label>
+                <input id="firstName" type="text" v-model="firstName" required>
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input id="lastName" type="text" v-model="lastName" required>
+            </div>
+            <div>
+                <label for="streetAddress">Street Address:</label>
+                <input id="streetAddress" type="text" v-model="streetAddress" required>
+            </div>
+            <div>
+                <label for="stateProvince">State:</label>
+                <select name="" id="" v-model="state">
+                    <option v-for="state in availableStates" v-bind:value="state.value">{{state.name}}</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Favorite Alpaca Colors:</label>
+                <ul class="alpacaColors">
+                    <div v-for="(color, index) in alpacaColors" :key="index">
+                        <input type="checkbox" :id="color" :value="color" v-model="selectedColors">
+                        <label :for="color">{{color}}</label>
+                      </div>                
+                </ul>
+            </div>
+            <div class="alpacaStatus">
+                <label>Describe your current alpaca status:</label>
+                <textarea id="" name="" v-model="status" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+        <div class="output">
+            <h3>Output</h3>
+            First Name: {{firstName}}<br>
+            Last Name: {{lastName}}<br>
+            Street: {{streetAddress}}<br>
+            State: {{stateProvince}}<br>
+            Color: {{selectedColors}}<br>
+            Status: {{status}}<br>
+        </div>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
+		
