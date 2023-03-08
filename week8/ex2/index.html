@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue Calculator</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Vue Calculator</h1>
+      <input type="number" v-model="num1">
+      <select v-model="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="number" v-model="num2">
+      <button @click="calculate">Calculate</button>
+      <p v-if="result !== null">Result: {{ result }}</p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
