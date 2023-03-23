@@ -1,44 +1,68 @@
-<!doctype html>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="lib/style.css">
-  <script src="https://unpkg.com/vue@3"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dsf6klq.css">
+    <title>Tennis Rackets</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
-
 <body>
-  <h1>Video Game Consoles (collected and not collected)</h1>
-  <div id="app">
-    <div class="collectionWrapper">
-      <div class="collectionRow header">
-        <div class="cell console-manufactuer">Manufactuer</div>
-        <div class="cell console-name">Console Name</div>
-        <div class="cell release-date">Console Release Date</div>
-        <div class="cell console-image">Image</div>
-        <div class="cell collected">Part of the collection</div>
-      </div>
-      <div class="collectionRow" v-for="(console, index) in consoles"
-        v-bind:class="{odd: index % 2 !== 0, owned: console.collected}">
-        <div class="cell console-manufactuer">{{console.manufactuer}}</div>
-        <div class="cell console-name">{{console.name}}</div>
-        <div class="cell release-date">{{console.releaseDate}}</div>
-        <div class="cell console-image"><img :src="console.image" :alt="console.name" /></div>
-        <div class="cell collected">{{console.collected}}</div>
-      </div>
+    <h1>My tennis rackets</h1>
+    <h2>I love to play tennis so after 15 years, I have a small collection.</h2>
+    <div id="myRackets">
+        <table>
+            <thead>
+                <th>Image</th>
+                <th>Totem</th>
+                <th>Got It From</th>
+                <th>Had Since</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                <tr 
+                v-for="(rackets, index) in rackets"
+                :class="{odd: index % 2 !== 0}"
+                >
+                    <td><img :src="rackets.image" alt="placeholder rackets image"></td>
+                    <td>{{rackets.brand}}</td>
+                    <td>{{rackets.tennisPlayer}}</td>
+                    <td>{{rackets.matches}}</td>
+                    <td>{{rackets.description}}</td>
+                    <td><button type="button" v-on:click="deleteItem(rackets)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <form v-on:submit="tbdFunc">
-      <fieldset>
-        <legend>Add a console to the collection</legend>
-        <div>
-          <label for="manufactuer"></label>
-          <input id="manufactuer" type="text">
-          v-model="newConsole"
-        </div>
-      </fieldset>
-    </form>
-  </div>
-  <script src="lib/script.js"></script>
+     <form v-on:submit.prevent="submitHandler">
+       <fieldset>
+           <legend>Add your favorite tennis racket!</legend>
+           <div>
+                <label for="image">Image</label>
+                <input id="image" type="text" v-model="newRacket.image">
+            </div>
+            <div>
+                <label for="brand">Brand</label>
+                <input id="item" type="text" v-model="newRacket.brand">
+            </div>
+            <div>
+                <label for="tennisPlayer">Tennisplayer</label>
+                <input id="gotFrom" type="text" v-model="newRacket.tennisPlayer">
+            </div>
+            <div>
+                <label for="matches">Matches played with</label>
+                <input id="hadSince" type="text" v-model="newRacket.matches">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <input id="description" type="text" v-model="newRacket.description">
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+      </form>      
+    <script src="main.js"></script>
 </body>
-
 </html>

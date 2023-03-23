@@ -1,0 +1,68 @@
+.odd {
+    background-color: #e5ced5;
+}
+
+body {
+    font-family: "futura", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    background-color: #fbf9f5;
+    margin: 20px;
+    color: #0f0057;
+    letter-spacing: 0.1px;
+}
+
+h1 {
+    font-family: "Impact";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 20;
+}
+
+h2, legend {
+    font-family: "futura", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+  min-width: 15%;
+  padding: 15px;
+}
+
+thead {
+    background-color: #f99ed2;
+    font-family: "freight-macro-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    padding: 15px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+fieldset .input {
+    width: 15%;
+}
+
+fieldset #submit {
+    width: 20%;
+}
