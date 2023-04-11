@@ -11,5 +11,8 @@ import { RouterView, RouterLink } from "vue-router"
 
 
 <style scoped>
-
+  * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
 </style>
