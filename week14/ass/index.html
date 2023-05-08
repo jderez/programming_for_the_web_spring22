@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Plant Simulation</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      body {
+        background-color: #c8e6c9;
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Simple Plant Simulation</h1>
+    </header>
+    <div class="container">
+      <div>
+        <label for="sunlight">Sunlight:</label>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          id="sunlight"
+          step="1"
+        />
+        <span id="sunlight-value"></span>
+      </div>
+      <div>
+        <label for="water">Water:</label>
+        <input type="range" min="0" max="100" value="50" id="water" step="1" />
+        <span id="water-value"></span>
+      </div>
+      <div>
+        <label for="soil">Soil Type:</label>
+        <select id="soil">
+          <option value="clay">Clay</option>
+          <option value="sandy">Sandy</option>
+          <option value="loam">Loam</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
